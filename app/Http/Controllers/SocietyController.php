@@ -30,6 +30,8 @@ class SocietyController extends Controller
             'name' => 'required',
             'address' => 'required',
             'superadminid' => 'required|exists:users,id',
+            'structuretype'=>'required'
+    
 
 
         ]);
@@ -63,6 +65,7 @@ class SocietyController extends Controller
 
         $society->address = $request->address;
         $society->superadminid = $request->superadminid;
+        $society->structuretype = $request->structuretype;
         $society->save();
 
 

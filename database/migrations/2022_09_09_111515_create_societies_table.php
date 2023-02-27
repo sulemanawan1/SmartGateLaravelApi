@@ -32,6 +32,8 @@ return new class extends Migration
             $table->string('address');
             $table->unsignedBigInteger('superadminid');
             $table->foreign('superadminid')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('structuretype');
+
             // $table->unsignedBigInteger('roleid');
             // $table->foreign('roleid')->references('roleid')->on('users');
             $table->timestamps();
